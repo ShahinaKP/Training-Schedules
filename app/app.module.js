@@ -8,16 +8,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var app_component_1 = require("./app.component");
+var header_module_1 = require("./shared/header/header.module");
+var footer_module_1 = require("./shared/footer/footer.module");
+var header_component_1 = require("./shared/header/header.component");
+var footer_component_1 = require("./shared/footer/footer.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                header_module_1.HeaderModule,
+                footer_module_1.FooterModule
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                header_component_1.HeaderComponent,
+                footer_component_1.FooterComponent
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

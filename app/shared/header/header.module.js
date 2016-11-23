@@ -8,18 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var header_component_1 = require('./header.component');
+var HeaderModule = (function () {
+    function HeaderModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: "my-app",
-            templateUrl: "app/app.component.html"
+    HeaderModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            bootstrap: [header_component_1.HeaderComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeaderModule);
+    return HeaderModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeaderModule = HeaderModule;
+//# sourceMappingURL=header.module.js.map
