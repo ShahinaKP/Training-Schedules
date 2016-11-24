@@ -9,18 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var FooterComponent = (function () {
-    function FooterComponent() {
+var platform_browser_1 = require("@angular/platform-browser");
+var login_component_1 = require("./login.component");
+var LoginModule = (function () {
+    function LoginModule() {
     }
-    FooterComponent = __decorate([
-        core_1.Component({
-            selector: "my-footer",
-            templateUrl: "app/shared/footer/footer.component.html",
-            styleUrls: ["app/shared/footer/footer.component.css"]
+    LoginModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            bootstrap: [login_component_1.LoginComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], FooterComponent);
-    return FooterComponent;
+    ], LoginModule);
+    return LoginModule;
 }());
-exports.FooterComponent = FooterComponent;
-//# sourceMappingURL=footer.component.js.map
+exports.LoginModule = LoginModule;
+//# sourceMappingURL=login.module.js.map

@@ -8,19 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var FooterComponent = (function () {
-    function FooterComponent() {
+var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var traininglist_component_1 = require('./traininglist.component');
+var TrainingListModule = (function () {
+    function TrainingListModule() {
     }
-    FooterComponent = __decorate([
-        core_1.Component({
-            selector: "my-footer",
-            templateUrl: "app/shared/footer/footer.component.html",
-            styleUrls: ["app/shared/footer/footer.component.css"]
+    TrainingListModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            bootstrap: [traininglist_component_1.TrainingListComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], FooterComponent);
-    return FooterComponent;
+    ], TrainingListModule);
+    return TrainingListModule;
 }());
-exports.FooterComponent = FooterComponent;
-//# sourceMappingURL=footer.component.js.map
+exports.TrainingListModule = TrainingListModule;
+//# sourceMappingURL=traininglist.module.js.map

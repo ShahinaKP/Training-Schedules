@@ -8,20 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var footer_component_1 = require("./footer.component");
-var FooterModule = (function () {
-    function FooterModule() {
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var login_component_1 = require('./login/login.component');
+var traininglist_component_1 = require('./trainings/traininglist.component');
+var routes = [
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'login', component: login_component_1.LoginComponent },
+    { path: 'trainings', component: traininglist_component_1.TrainingListComponent }
+];
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
     }
-    FooterModule = __decorate([
+    AppRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            bootstrap: [footer_component_1.FooterComponent]
+            imports: [router_1.RouterModule.forRoot(routes)],
+            exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], FooterModule);
-    return FooterModule;
+    ], AppRoutingModule);
+    return AppRoutingModule;
 }());
-exports.FooterModule = FooterModule;
-//# sourceMappingURL=footer.module.js.map
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=app-routing.module.js.map
