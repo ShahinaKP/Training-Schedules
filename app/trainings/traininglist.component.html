@@ -1,1 +1,17 @@
-<div>Training List</div>
+<div class="trainings-wrapper">
+	<div class="training-wrapper" *ngFor="let trainingData of trainings">
+		<div class="training-title-wrapper">
+			<span class="training-title">{{trainingData.title}}</span>
+			<span class="training-date">{{trainingData.date}}</span>
+		</div>
+		<div class="training-trainer-wrapper">
+			<span class="training-trainer">{{trainingData.trainer}}</span>
+		</div>
+		<div class="training-desc-wrapper">
+			<span class="training-desc">{{trainingData.desc}}</span>
+		</div>
+		<div class="training-venue-wrapper">
+			<span class="training-venue">{{trainingData.venue}}</span>
+		</div>
+	</div>
+</div>

@@ -9,16 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var traininglist_service_1 = require("./traininglist.service");
 var TrainingListComponent = (function () {
-    function TrainingListComponent() {
+    function TrainingListComponent(trainingListService) {
+        var _this = this;
+        this.trainingListService = trainingListService;
+        this.trainingListService.getTrainings()
+            .subscribe(function (data) {
+            _this.trainings = data;
+        }, function (error) {
+            //Handle Error here
+        });
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], TrainingListComponent.prototype, "trainings", void 0);
     TrainingListComponent = __decorate([
         core_1.Component({
             selector: "training-list",
             templateUrl: "app/trainings/traininglist.component.html",
             styleUrls: ['app/trainings/traininglist.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [traininglist_service_1.TrainingListService])
     ], TrainingListComponent);
     return TrainingListComponent;
 }());

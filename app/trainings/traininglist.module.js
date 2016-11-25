@@ -11,12 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var traininglist_component_1 = require('./traininglist.component');
+var traininglist_service_1 = require('./traininglist.service');
 var TrainingListModule = (function () {
     function TrainingListModule() {
     }
     TrainingListModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
+            declarations: [traininglist_component_1.TrainingListComponent],
+            providers: [traininglist_service_1.TrainingListService],
             bootstrap: [traininglist_component_1.TrainingListComponent]
         }), 
         __metadata('design:paramtypes', [])

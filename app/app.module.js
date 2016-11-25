@@ -12,22 +12,21 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var app_routing_module_1 = require("./app-routing.module");
-var forms_1 = require('@angular/forms');
 var header_module_1 = require("./shared/header/header.module");
 var footer_module_1 = require("./shared/footer/footer.module");
 var login_module_1 = require("./login/login.module");
 var traininglist_module_1 = require("./trainings/traininglist.module");
 var header_component_1 = require("./shared/header/header.component");
 var footer_component_1 = require("./shared/footer/footer.component");
-var login_component_1 = require("./login/login.component");
-var traininglist_component_1 = require("./trainings/traininglist.component");
+var login_service_1 = require("./login/login.service");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, header_module_1.HeaderModule, footer_module_1.FooterModule, login_module_1.LoginModule, app_routing_module_1.AppRoutingModule, forms_1.ReactiveFormsModule, traininglist_module_1.TrainingListModule],
-            declarations: [app_component_1.AppComponent, header_component_1.HeaderComponent, footer_component_1.FooterComponent, login_component_1.LoginComponent, traininglist_component_1.TrainingListComponent],
+            imports: [platform_browser_1.BrowserModule, header_module_1.HeaderModule, footer_module_1.FooterModule, login_module_1.LoginModule, app_routing_module_1.AppRoutingModule, traininglist_module_1.TrainingListModule],
+            declarations: [app_component_1.AppComponent, header_component_1.HeaderComponent, footer_component_1.FooterComponent],
+            providers: [login_service_1.LoginService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

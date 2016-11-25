@@ -1,0 +1,58 @@
+[		
+	{ 
+		"username": "rincy",
+ 		"password": "12345678",
+ 		"userType": "hr"
+	},
+	{ 
+		"username": "nishin",
+ 		"password": "12345678",
+ 		"userType": "approver"
+	},
+	{ 
+		"username": "shahina",
+ 		"password": "12345678",
+ 		"userType": "employee"
+	},
+	{ 
+		"username": "ratheesh",
+ 		"password": "12345678",
+ 		"userType": "approver"
+	},
+	{ 
+		"username": "manooja",
+ 		"password": "12345678",
+ 		"userType": "approver"
+	},
+	{ 
+		"username": "ameena",
+ 		"password": "12345678",
+ 		"userType": "approver"
+	},
+	{ 
+		"username": "saju",
+ 		"password": "12345678",
+ 		"userType": "approver"
+	},
+	{ 
+		"username": "vinay",
+ 		"password": "12345678",
+ 		"userType": "employee"
+	},
+	{ 
+		"username": "anusree",
+ 		"password": "12345678",
+ 		"userType": "employee"
+	},
+	{ 
+		"username": "reshma",
+ 		"password": "12345678",
+ 		"userType": "employee"
+	},
+	{ 
+		"username": "parvathy",
+ 		"password": "12345678",
+ 		"userType": "employee"
+	}
+]
+

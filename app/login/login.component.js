@@ -11,20 +11,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var router_1 = require('@angular/router');
+var login_service_1 = require("./login.service");
 var LoginComponent = (function () {
-    function LoginComponent(fb, router) {
+    function LoginComponent(fb, router, loginService) {
         this.fb = fb;
         this.router = router;
+        this.loginService = loginService;
         this.loginForm = this.fb.group({
             username: ["", forms_1.Validators.required],
             password: ["", forms_1.Validators.required]
         });
     }
     LoginComponent.prototype.doLogin = function (value) {
-        debugger;
-        console.log(event);
-        console.log(this.loginForm.value);
-        this.router.navigate(['/trainings']);
+        var _this = this;
+        this.loginService.getUsers()
+            .subscribe(function (data) {
+            if (_this.chkUser(value, data)) {
+                _this.router.navigate(['/trainings']);
+            }
+            else {
+                alert('Enter Valid Credentials');
+            }
+        }, function (error) {
+            //Handle Error here
+        });
+    };
+    LoginComponent.prototype.chkUser = function (userValue, users) {
+        this.user = users.filter(function (element) {
+            return element.username == userValue.username && element.password == userValue.password;
+        });
+        if (this.user.length)
+            return true;
     };
     LoginComponent = __decorate([
         core_1.Component({
@@ -32,7 +49,7 @@ var LoginComponent = (function () {
             templateUrl: "app/login/login.component.html",
             styleUrls: ["app/login/login.component.css"]
         }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder, router_1.Router])
+        __metadata('design:paramtypes', [forms_1.FormBuilder, router_1.Router, login_service_1.LoginService])
     ], LoginComponent);
     return LoginComponent;
 }());
