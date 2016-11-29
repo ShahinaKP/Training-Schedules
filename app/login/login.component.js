@@ -17,6 +17,7 @@ var LoginComponent = (function () {
         this.fb = fb;
         this.router = router;
         this.loginService = loginService;
+        this.invalidLogin = false;
         this.loginForm = this.fb.group({
             username: ["", forms_1.Validators.required],
             password: ["", forms_1.Validators.required]
@@ -27,10 +28,12 @@ var LoginComponent = (function () {
         this.loginService.getUsers()
             .subscribe(function (data) {
             if (_this.chkUser(value, data)) {
+                _this.invalidLogin = false;
                 _this.router.navigate(['/trainings']);
             }
             else {
-                alert('Enter Valid Credentials');
+                // alert('Enter Valid Credentials');
+                _this.invalidLogin = true;
             }
         }, function (error) {
             //Handle Error here

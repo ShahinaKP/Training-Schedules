@@ -11,16 +11,16 @@ import { LoginService } from "./login.service";
 })
 export class LoginComponent {
 	loginForm :FormGroup;
-	user: {};
-
+	user: [any];
+    invalidLogin: boolean = false;   
     constructor(
-    	public fb: FormBuilder,
+    	private fb: FormBuilder,
     	private router: Router,
-    	private loginService: LoginService
+    	private loginService: LoginService,
 	) {
     	this.loginForm = this.fb.group({
 		   	username: ["", Validators.required],
-	    	password: ["", Validators.required];
+	    	password: ["", Validators.required]
 	    });
 	}
  
@@ -29,10 +29,13 @@ export class LoginComponent {
 		.subscribe(
             data => {
             	if(this.chkUser(value, data)) {
+                    this.invalidLogin = false;
             		this.router.navigate(['/trainings']);
             	}
             	else {
-            		alert('Enter Valid Credentials');
+            		// alert('Enter Valid Credentials');
+                    this.invalidLogin = true;
+
             	}
             },
             error => {

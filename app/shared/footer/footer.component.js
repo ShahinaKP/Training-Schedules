@@ -14,7 +14,7 @@ var FooterComponent = (function () {
     }
     FooterComponent = __decorate([
         core_1.Component({
-            selector: "my-footer",
+            selector: "trainings-footer",
             templateUrl: "app/shared/footer/footer.component.html",
             styleUrls: ["app/shared/footer/footer.component.css"]
         }), 

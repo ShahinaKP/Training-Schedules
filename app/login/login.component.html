@@ -13,6 +13,7 @@
             [formControl]="loginForm.controls['password']" required 
             [ngClass]="{'has-error':!loginForm.controls['password'].valid}"/>    
         </div>
+        <div *ngIf="invalidLogin" class="error-messages">Please Enter Valid Credentials</div>
         <div class="login-control-wrapper">
             <button type="submit" class="login-btn" [ngClass]="{disabled : !loginForm.valid}" [disabled]="!loginForm.valid">Login</button>
         </div>

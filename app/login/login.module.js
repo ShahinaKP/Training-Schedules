@@ -13,6 +13,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
 var login_component_1 = require("./login.component");
+var login_service_1 = require("./login.service");
 var LoginModule = (function () {
     function LoginModule() {
     }
@@ -20,6 +21,7 @@ var LoginModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.ReactiveFormsModule],
             declarations: [login_component_1.LoginComponent],
+            providers: [login_service_1.LoginService],
             bootstrap: [login_component_1.LoginComponent]
         }), 
         __metadata('design:paramtypes', [])

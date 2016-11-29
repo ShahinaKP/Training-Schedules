@@ -4,15 +4,14 @@ import { TrainingListService } from "./traininglist.service";
 @Component({
   selector: "training-list",
   templateUrl: "app/trainings/traininglist.component.html",
-  styleUrls:  ['app/trainings/traininglist.component.css']
+  styleUrls:  ["app/trainings/traininglist.component.css"]
 })
 
 
-export class TrainingListComponent { 
-	@Input() trainings :any[];	
-
+export class TrainingListComponent {
+	@Input() trainings: any[];
 	constructor(
-		private trainingListService: TrainingListService;
+		private trainingListService: TrainingListService
 		) {
 			this.trainingListService.getTrainings()
 			.subscribe(

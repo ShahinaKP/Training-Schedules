@@ -29,7 +29,7 @@ var TrainingListComponent = (function () {
         core_1.Component({
             selector: "training-list",
             templateUrl: "app/trainings/traininglist.component.html",
-            styleUrls: ['app/trainings/traininglist.component.css']
+            styleUrls: ["app/trainings/traininglist.component.css"]
         }), 
         __metadata('design:paramtypes', [traininglist_service_1.TrainingListService])
     ], TrainingListComponent);
