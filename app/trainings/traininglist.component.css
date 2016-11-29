@@ -1,0 +1,11 @@
+.trainings-wrapper {
+    float: left;
+    width: 100%;
+}
+.training-wrapper {
+    border: 2px solid #ccc;
+    float: left;
+    margin: 2%;
+    padding: 20px;
+    width: 25%;
+}

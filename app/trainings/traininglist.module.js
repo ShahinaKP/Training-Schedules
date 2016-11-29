@@ -8,18 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var traininglist_component_1 = require('./traininglist.component');
+var traininglist_service_1 = require('./traininglist.service');
+var TrainingListModule = (function () {
+    function TrainingListModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: "trainings-app",
-            templateUrl: "app/app.component.html"
+    TrainingListModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [traininglist_component_1.TrainingListComponent],
+            providers: [traininglist_service_1.TrainingListService],
+            bootstrap: [traininglist_component_1.TrainingListComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TrainingListModule);
+    return TrainingListModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TrainingListModule = TrainingListModule;
+//# sourceMappingURL=traininglist.module.js.map

@@ -8,18 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
+var TrainingListService = (function () {
+    function TrainingListService(http) {
+        this.http = http;
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: "trainings-app",
-            templateUrl: "app/app.component.html"
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    TrainingListService.prototype.getTrainings = function () {
+        return this.http.get('assets/json/trainings.json')
+            .map(function (response) { return response.json(); });
+    };
+    TrainingListService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], TrainingListService);
+    return TrainingListService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TrainingListService = TrainingListService;
+//# sourceMappingURL=traininglist.service.js.map

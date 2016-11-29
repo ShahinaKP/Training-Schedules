@@ -1,0 +1,44 @@
+[
+	{ 
+		"title": "Training Name1",
+		"date": "10/12/2016",
+		"trainer": "Trainer Name1",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+		"venue": "Training Room"
+	},
+	{
+		"title": "Training Name2",
+		"date": "12/12/2016",
+		"trainer": "Trainer Name2",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+		"venue": "Training Room"
+	},
+	{ 
+		"title": "Training Name3",
+		"date": "13/12/2016",
+		"trainer": "Trainer Name3",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+		"venue": "Training Room"
+	},
+	{
+		"title": "Training Name4",
+		"date": "12/12/2016",
+		"trainer": "Trainer Name4",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+		"venue": "Training Room"
+	},
+	{ 
+		"title": "Training Name5",
+		"date": "10/12/2016",
+		"trainer": "Trainer Name5",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+		"venue": "Training Room"
+	},
+	{
+		"title": "Training Name6",
+		"date": "12/12/2016",
+		"trainer": "Trainer Name6",
+		"desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+		"venue": "Training Room"
+	}
+]
