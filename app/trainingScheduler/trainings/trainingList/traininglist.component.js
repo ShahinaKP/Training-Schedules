@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var traininglist_service_1 = require("./traininglist.service");
+var router_1 = require("@angular/router");
 var TrainingListComponent = (function () {
-    function TrainingListComponent(trainingListService) {
+    function TrainingListComponent(router, trainingListService) {
         var _this = this;
+        this.router = router;
         this.trainingListService = trainingListService;
         this.trainingListService.getTrainings()
             .subscribe(function (data) {
@@ -21,6 +23,9 @@ var TrainingListComponent = (function () {
             //Handle Error here
         });
     }
+    TrainingListComponent.prototype.getDetails = function () {
+        this.router.navigate(["/training_scheduler/trainings/trainingDetails"]);
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Array)
@@ -28,13 +33,12 @@ var TrainingListComponent = (function () {
     TrainingListComponent = __decorate([
         core_1.Component({
             selector: "training-list",
-            templateUrl: "app/trainings/traininglist.component.html",
-            styleUrls: ["app/trainings/trainings.component.css"]
+            templateUrl: "app/trainingScheduler/trainings/trainingList/traininglist.component.html",
+            styleUrls: ["app/trainingScheduler/trainings.component.css"]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof traininglist_service_1.TrainingListService !== 'undefined' && traininglist_service_1.TrainingListService) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [router_1.Router, traininglist_service_1.TrainingListService])
     ], TrainingListComponent);
     return TrainingListComponent;
-    var _a;
 }());
 exports.TrainingListComponent = TrainingListComponent;
 //# sourceMappingURL=traininglist.component.js.map

@@ -1,5 +1,6 @@
 <div class="trainings-wrapper">
-	<div class="training-wrapper" *ngFor="let trainingData of trainings">
+	<div class="training-wrapper" *ngFor="let trainingData of trainings" 
+	(click)="getDetails()">
 		<div class="training-title-wrapper">
 			<span class="training-title">{{trainingData.title}}</span>
 			<span class="training-date">- {{trainingData.date}}</span>

@@ -8,20 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var header_component_1 = require('./header.component');
-var HeaderModule = (function () {
-    function HeaderModule() {
+var core_1 = require("@angular/core");
+var TrainingSchedulerComponent = (function () {
+    function TrainingSchedulerComponent() {
     }
-    HeaderModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            bootstrap: [header_component_1.HeaderComponent]
+    TrainingSchedulerComponent = __decorate([
+        core_1.Component({
+            selector: "trainings",
+            templateUrl: "app/trainingScheduler/trainingScheduler.component.html",
+            styleUrls: ["app/trainingScheduler/trainings.component.css"]
         }), 
         __metadata('design:paramtypes', [])
-    ], HeaderModule);
-    return HeaderModule;
+    ], TrainingSchedulerComponent);
+    return TrainingSchedulerComponent;
 }());
-exports.HeaderModule = HeaderModule;
-//# sourceMappingURL=header.module.js.map
+exports.TrainingSchedulerComponent = TrainingSchedulerComponent;
+//# sourceMappingURL=trainingScheduler.component.js.map

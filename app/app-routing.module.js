@@ -11,11 +11,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var login_component_1 = require('./login/login.component');
-var traininglist_component_1 = require('./trainings/traininglist.component');
+var trainingScheduler_component_1 = require('./trainingScheduler/trainingScheduler.component');
+var trainingsmain_component_1 = require('./trainingScheduler/trainings/trainingList/trainingsmain.component');
+var traininglist_component_1 = require('./trainingScheduler/trainings/trainingList/traininglist.component');
+var mytrainings_component_1 = require('./trainingScheduler/mytrainings/mytrainings.component');
+var trainingDetails_component_1 = require('./trainingScheduler/trainings/trainingDetail/trainingDetails.component');
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: login_component_1.LoginComponent },
-    { path: 'trainings', component: traininglist_component_1.TrainingListComponent }
+    { path: 'training_scheduler', component: trainingScheduler_component_1.TrainingSchedulerComponent,
+        children: [
+            { path: 'trainings', component: trainingsmain_component_1.TrainingsMainComponent,
+                children: [
+                    { path: '', component: traininglist_component_1.TrainingListComponent },
+                    { path: 'trainingDetails', component: trainingDetails_component_1.TrainingDetailsComponent }]
+            },
+            { path: 'mytrainings', component: mytrainings_component_1.MyTrainingsComponent }
+        ]
+    }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

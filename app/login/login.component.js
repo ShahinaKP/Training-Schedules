@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
-var router_1 = require('@angular/router');
+var router_1 = require("@angular/router");
 var login_service_1 = require("./login.service");
 var LoginComponent = (function () {
     function LoginComponent(fb, router, loginService) {
@@ -29,10 +29,10 @@ var LoginComponent = (function () {
             .subscribe(function (data) {
             if (_this.chkUser(value, data)) {
                 _this.invalidLogin = false;
-                _this.router.navigate(['/trainings']);
+                _this.router.navigate(["/training_scheduler/trainings"]);
             }
             else {
-                // alert('Enter Valid Credentials');
+                // alert("Enter Valid Credentials");
                 _this.invalidLogin = true;
             }
         }, function (error) {

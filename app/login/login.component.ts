@@ -1,6 +1,6 @@
 import { Component} from "@angular/core";
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule, Router } from "@angular/router";
 
 import { LoginService } from "./login.service";
 
@@ -10,7 +10,7 @@ import { LoginService } from "./login.service";
   styleUrls:  ["app/login/login.component.css"]
 })
 export class LoginComponent {
-	loginForm :FormGroup;
+	loginForm: FormGroup;
 	user: [any];
     invalidLogin: boolean = false;   
     constructor(
@@ -30,10 +30,10 @@ export class LoginComponent {
             data => {
             	if(this.chkUser(value, data)) {
                     this.invalidLogin = false;
-            		this.router.navigate(['/trainings']);
+            		this.router.navigate(["/training_scheduler/trainings"]);
             	}
             	else {
-            		// alert('Enter Valid Credentials');
+            		// alert("Enter Valid Credentials");
                     this.invalidLogin = true;
 
             	}

@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var TrainingDetailsComponent = (function () {
-    function TrainingDetailsComponent() {
+var TrainingSchedulerComponent = (function () {
+    function TrainingSchedulerComponent() {
     }
-    TrainingDetailsComponent = __decorate([
+    TrainingSchedulerComponent = __decorate([
         core_1.Component({
-            selector: "training-detail",
-            templateUrl: "app/trainings/trainingDetails.component.html",
+            selector: "trainings",
+            templateUrl: "app/trainings/trainingScheduler.component.html",
             styleUrls: ["app/trainings/trainings.component.css"]
         }), 
         __metadata('design:paramtypes', [])
-    ], TrainingDetailsComponent);
-    return TrainingDetailsComponent;
+    ], TrainingSchedulerComponent);
+    return TrainingSchedulerComponent;
 }());
-exports.TrainingDetailsComponent = TrainingDetailsComponent;
-//# sourceMappingURL=trainingDetails.component.js.map
+exports.TrainingSchedulerComponent = TrainingSchedulerComponent;
+//# sourceMappingURL=trainingScheduler.component.js.map

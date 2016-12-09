@@ -15,8 +15,8 @@ var TrainingDetailsComponent = (function () {
     TrainingDetailsComponent = __decorate([
         core_1.Component({
             selector: "training-detail",
-            templateUrl: "app/trainings/trainingDetails.component.html",
-            styleUrls: ["app/trainings/trainings.component.css"]
+            templateUrl: "app/trainingScheduler/trainings/trainingDetail/trainingDetails.component.html",
+            styleUrls: ["app/trainingScheduler/trainings.component.css"]
         }), 
         __metadata('design:paramtypes', [])
     ], TrainingDetailsComponent);
