@@ -1,6 +1,8 @@
-import { Component, Input} from "@angular/core";
-import { TrainingListService } from "./traininglist.service";
+import { Component, Input, OnInit } from "@angular/core";
 import { RouterModule, Router } from "@angular/router";
+
+import { TrainingsMainService } from "../trainingsmain.service";
+import { TrainingListingComponent } from "../../sharedcomponent/trainingListComp.component";
 
 @Component({
   selector: "training-list",
@@ -9,26 +11,25 @@ import { RouterModule, Router } from "@angular/router";
 })
 
 
-export class TrainingListComponent {
-	@Input() trainings: any[];
+export class TrainingListComponent implements OnInit {
+	trainings: any[];
 	constructor(
 		private router: Router,
-		private trainingListService: TrainingListService
-		) {
-			this.trainingListService.getTrainings()
+		private trainingListService: TrainingsMainService) {}
+
+	ngOnInit() {
+		this.getTrainings();
+	}
+
+	getTrainings() {
+		this.trainingListService.getTrainings()
 			.subscribe(
 	            data => {
 	            	this.trainings = data;
 	            },
 	            error => {
-	            	//Handle Error here
+	            	//Handle th Error here
 	            }
         	);
 	}
-
-	getDetails() {
-		this.router.navigate(["/training_scheduler/trainings/trainingDetails"]);
-	}
-
-
 }

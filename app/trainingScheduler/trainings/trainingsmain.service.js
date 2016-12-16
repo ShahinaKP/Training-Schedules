@@ -11,19 +11,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/map');
-var TrainingListService = (function () {
-    function TrainingListService(http) {
+var TrainingsMainService = (function () {
+    function TrainingsMainService(http) {
         this.http = http;
     }
-    TrainingListService.prototype.getTrainings = function () {
+    TrainingsMainService.prototype.getTrainings = function () {
         return this.http.get('assets/json/trainings.json')
             .map(function (response) { return response.json(); });
     };
-    TrainingListService = __decorate([
+    TrainingsMainService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], TrainingListService);
-    return TrainingListService;
+    ], TrainingsMainService);
+    return TrainingsMainService;
 }());
-exports.TrainingListService = TrainingListService;
-//# sourceMappingURL=traininglist.service.js.map
+exports.TrainingsMainService = TrainingsMainService;
+//# sourceMappingURL=trainingsmain.service.js.map

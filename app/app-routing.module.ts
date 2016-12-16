@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { TrainingSchedulerComponent } from './trainingScheduler/trainingScheduler.component';
-import { TrainingsMainComponent } from './trainingScheduler/trainings/trainingList/trainingsmain.component';
+import { TrainingsMainComponent } from './trainingScheduler/trainings/trainingsmain.component';
 import { TrainingListComponent } from './trainingScheduler/trainings/trainingList/traininglist.component';
 import { MyTrainingsComponent} from './trainingScheduler/mytrainings/mytrainings.component';
 import { TrainingDetailsComponent } from './trainingScheduler/trainings/trainingDetail/trainingDetails.component';

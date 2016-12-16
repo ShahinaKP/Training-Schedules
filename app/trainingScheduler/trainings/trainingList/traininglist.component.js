@@ -9,34 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var traininglist_service_1 = require("./traininglist.service");
 var router_1 = require("@angular/router");
+var trainingsmain_service_1 = require("../trainingsmain.service");
 var TrainingListComponent = (function () {
     function TrainingListComponent(router, trainingListService) {
-        var _this = this;
         this.router = router;
         this.trainingListService = trainingListService;
+    }
+    TrainingListComponent.prototype.ngOnInit = function () {
+        this.getTrainings();
+    };
+    TrainingListComponent.prototype.getTrainings = function () {
+        var _this = this;
         this.trainingListService.getTrainings()
             .subscribe(function (data) {
             _this.trainings = data;
         }, function (error) {
-            //Handle Error here
+            //Handle th Error here
         });
-    }
-    TrainingListComponent.prototype.getDetails = function () {
-        this.router.navigate(["/training_scheduler/trainings/trainingDetails"]);
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Array)
-    ], TrainingListComponent.prototype, "trainings", void 0);
     TrainingListComponent = __decorate([
         core_1.Component({
             selector: "training-list",
             templateUrl: "app/trainingScheduler/trainings/trainingList/traininglist.component.html",
             styleUrls: ["app/trainingScheduler/trainings.component.css"]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, traininglist_service_1.TrainingListService])
+        __metadata('design:paramtypes', [router_1.Router, trainingsmain_service_1.TrainingsMainService])
     ], TrainingListComponent);
     return TrainingListComponent;
 }());

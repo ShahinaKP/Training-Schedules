@@ -28,6 +28,7 @@ var LoginComponent = (function () {
         this.loginService.getUsers()
             .subscribe(function (data) {
             if (_this.chkUser(value, data)) {
+                _this.trainerName = value.username;
                 _this.invalidLogin = false;
                 _this.router.navigate(["/training_scheduler/trainings"]);
             }

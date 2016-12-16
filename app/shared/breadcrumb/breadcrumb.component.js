@@ -8,23 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var traininglist_component_1 = require('./traininglist.component');
-var traininglist_service_1 = require('./traininglist.service');
-var TrainingListModule = (function () {
-    function TrainingListModule() {
+var core_1 = require("@angular/core");
+var BreadcrumbComponent = (function () {
+    function BreadcrumbComponent() {
     }
-    TrainingListModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [traininglist_component_1.TrainingListComponent],
-            providers: [traininglist_service_1.TrainingListService],
-            bootstrap: [traininglist_component_1.TrainingListComponent]
+    BreadcrumbComponent = __decorate([
+        core_1.Component({
+            selector: "breadcrumb",
+            templateUrl: "app/shared/breadcrumb/breadcrumb.component.html",
+            styleUrls: ["app/shared/breadcrumb/breadcrumb.component.css"]
         }), 
         __metadata('design:paramtypes', [])
-    ], TrainingListModule);
-    return TrainingListModule;
+    ], BreadcrumbComponent);
+    return BreadcrumbComponent;
 }());
-exports.TrainingListModule = TrainingListModule;
-//# sourceMappingURL=traininglist.module.js.map
+exports.BreadcrumbComponent = BreadcrumbComponent;
+//# sourceMappingURL=breadcrumb.component.js.map

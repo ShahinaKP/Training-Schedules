@@ -10,6 +10,7 @@ import { LoginService } from "./login.service";
   styleUrls:  ["app/login/login.component.css"]
 })
 export class LoginComponent {
+    public trainerName: String;
 	loginForm: FormGroup;
 	user: [any];
     invalidLogin: boolean = false;   
@@ -29,6 +30,7 @@ export class LoginComponent {
 		.subscribe(
             data => {
             	if(this.chkUser(value, data)) {
+                    this.trainerName = value.username;
                     this.invalidLogin = false;
             		this.router.navigate(["/training_scheduler/trainings"]);
             	}
@@ -49,7 +51,6 @@ export class LoginComponent {
             return element.username == userValue.username && element.password == userValue.password ;
         });
         if (this.user.length)
-        	return true;
-        
+        	return true;        
 	}
 }

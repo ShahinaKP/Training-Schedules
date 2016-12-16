@@ -10,24 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var app_routing_module_1 = require("../app-routing.module");
-var trainingScheduler_component_1 = require('./trainingScheduler.component');
-var traininglist_component_1 = require('./traininglist.component');
 var trainingDetails_component_1 = require('./trainingDetails.component');
-var traininglist_service_1 = require('./traininglist.service');
-var TrainingSchedulerModule = (function () {
-    function TrainingSchedulerModule() {
+var TrainingDetailModule = (function () {
+    function TrainingDetailModule() {
     }
-    TrainingSchedulerModule = __decorate([
+    TrainingDetailModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_module_1.AppRoutingModule],
-            declarations: [trainingScheduler_component_1.TrainingSchedulerComponent, traininglist_component_1.TrainingListComponent, trainingDetails_component_1.TrainingDetailsComponent],
-            providers: [traininglist_service_1.TrainingListService],
-            bootstrap: [trainingScheduler_component_1.TrainingSchedulerComponent]
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [trainingDetails_component_1.TrainingDetailsComponent],
+            bootstrap: [trainingDetails_component_1.TrainingDetailsComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], TrainingSchedulerModule);
-    return TrainingSchedulerModule;
+    ], TrainingDetailModule);
+    return TrainingDetailModule;
 }());
-exports.TrainingSchedulerModule = TrainingSchedulerModule;
-//# sourceMappingURL=trainingScheduler.module.js.map
+exports.TrainingDetailModule = TrainingDetailModule;
+//# sourceMappingURL=trainingDetails.module.js.map

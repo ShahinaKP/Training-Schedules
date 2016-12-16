@@ -9,22 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var traininglist_component_1 = require('./traininglist.component');
-var traininglist_service_1 = require('./traininglist.service');
-var TrainingListModule = (function () {
-    function TrainingListModule() {
+require('rxjs/add/operator/map');
+var SharedService = (function () {
+    function SharedService() {
     }
-    TrainingListModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [traininglist_component_1.TrainingListComponent],
-            providers: [traininglist_service_1.TrainingListService],
-            bootstrap: [traininglist_component_1.TrainingListComponent]
-        }), 
+    SharedService.prototype.setData = function (data) {
+        this.data = data;
+    };
+    SharedService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], TrainingListModule);
-    return TrainingListModule;
+    ], SharedService);
+    return SharedService;
 }());
-exports.TrainingListModule = TrainingListModule;
-//# sourceMappingURL=traininglist.module.js.map
+exports.SharedService = SharedService;
+//# sourceMappingURL=sharedService .service.js.map
