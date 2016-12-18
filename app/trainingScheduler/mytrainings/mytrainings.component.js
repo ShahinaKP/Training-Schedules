@@ -17,8 +17,6 @@ var MyTrainingsComponent = (function () {
         this.trainingListService = trainingListService;
     }
     MyTrainingsComponent.prototype.ngOnInit = function () {
-        debugger;
-        console.log(this.loginComponent.trainerName);
         this.getTrainings();
     };
     MyTrainingsComponent.prototype.getTrainings = function () {
@@ -27,10 +25,10 @@ var MyTrainingsComponent = (function () {
             .subscribe(function (data) {
             _this.trainings = data;
             _this.mytrainings = _this.trainings.filter(function (element) {
-                return element.trainer == _this.loginComponent.trainerName;
+                return element.trainer == "Trainer Name1"; //this.loginComponent.trainerName;
             });
             debugger;
-            _this.mytrainings = data;
+            //this.mytrainings = data;
         }, function (error) {
             //Handle th Error here
         });

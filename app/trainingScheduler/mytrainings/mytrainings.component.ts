@@ -21,8 +21,6 @@ export class MyTrainingsComponent implements OnInit {
 		private trainingListService: TrainingsMainService) {}
 
 	ngOnInit() {
-		debugger;
-		console.log(this.loginComponent.trainerName);
 		this.getTrainings();
 	}
 
@@ -32,10 +30,10 @@ export class MyTrainingsComponent implements OnInit {
 	            data => {
 	            	this.trainings = data;
 	            	this.mytrainings = this.trainings.filter(element => {
-			            return element.trainer == this.loginComponent.trainerName;
+			            return element.trainer == "Trainer Name1";//this.loginComponent.trainerName;
 			        });
 			        debugger;
-	            	this.mytrainings = data;
+	            	//this.mytrainings = data;
 	            },
 	            error => {
 	            	//Handle th Error here

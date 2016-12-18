@@ -8,7 +8,7 @@ export class SharedService {
   data: String;
 
   constructor() { }
-
+  
   setData(data: String) {
     this.data = data;
   }
