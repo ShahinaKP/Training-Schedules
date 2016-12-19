@@ -1,0 +1,7 @@
+<div class="trainings-wrapper">
+	<div class="training-wrapper" *ngFor="let trainingData of trainings">
+		 <trainings-list [training]="trainingData" 
+		 routerLink="trainingDetails"></trainings-list>
+		
+	</div>
+</div>

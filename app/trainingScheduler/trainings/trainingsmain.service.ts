@@ -4,9 +4,9 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class TrainingListService {
+export class TrainingsMainService {
   constructor(private http: Http) { }
-  
+ 
   getTrainings() {
     return this.http.get('assets/json/trainings.json')
       .map(response => response.json());

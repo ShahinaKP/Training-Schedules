@@ -10,18 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var footer_component_1 = require("./footer.component");
-var FooterModule = (function () {
-    function FooterModule() {
+var trainingsmain_component_1 = require("./trainingsmain.component");
+var trainingsmain_service_1 = require("./trainingsmain.service");
+var trainingListComp_component_1 = require("../sharedcomponent/trainingListComp.component");
+var traininglist_component_1 = require("./trainingList/traininglist.component");
+var TrainingsMainModule = (function () {
+    function TrainingsMainModule() {
     }
-    FooterModule = __decorate([
+    TrainingsMainModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            bootstrap: [footer_component_1.FooterComponent]
+            declarations: [trainingsmain_component_1.TrainingsMainComponent, trainingListComp_component_1.TrainingListingComponent, traininglist_component_1.TrainingListComponent],
+            providers: [trainingsmain_service_1.TrainingsMainService],
+            bootstrap: [trainingsmain_component_1.TrainingsMainComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], FooterModule);
-    return FooterModule;
+    ], TrainingsMainModule);
+    return TrainingsMainModule;
 }());
-exports.FooterModule = FooterModule;
-//# sourceMappingURL=footer.module.js.map
+exports.TrainingsMainModule = TrainingsMainModule;
+//# sourceMappingURL=trainingsmain.module.js.map

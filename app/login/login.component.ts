@@ -1,6 +1,6 @@
 import { Component} from "@angular/core";
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule, Router } from "@angular/router";
 
 import { LoginService } from "./login.service";
 
@@ -10,7 +10,8 @@ import { LoginService } from "./login.service";
   styleUrls:  ["app/login/login.component.css"]
 })
 export class LoginComponent {
-	loginForm :FormGroup;
+    public trainerName: String;
+	loginForm: FormGroup;
 	user: [any];
     invalidLogin: boolean = false;   
     constructor(
@@ -29,11 +30,12 @@ export class LoginComponent {
 		.subscribe(
             data => {
             	if(this.chkUser(value, data)) {
+                    this.trainerName = value.username;
                     this.invalidLogin = false;
-            		this.router.navigate(['/trainings']);
+            		this.router.navigate(["/training_scheduler/trainings"]);
             	}
             	else {
-            		// alert('Enter Valid Credentials');
+            		// alert("Enter Valid Credentials");
                     this.invalidLogin = true;
 
             	}
@@ -49,7 +51,6 @@ export class LoginComponent {
             return element.username == userValue.username && element.password == userValue.password ;
         });
         if (this.user.length)
-        	return true;
-        
+        	return true;        
 	}
 }

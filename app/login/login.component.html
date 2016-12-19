@@ -3,13 +3,13 @@
         <h2>Login</h2>
         <div class="login-control-wrapper" >
             <label for="username">Username:</label>
-            <input type="text" class="login-control" 
+            <input type="text" class="login-control" value="shahina"
             [formControl]="loginForm.controls['username']" required 
             [ngClass]="{'has-error':!loginForm.controls['username'].valid}"/>
         </div>
         <div class="login-control-wrapper">
             <label for="password">Password:</label>
-            <input type="password" class="login-control" 
+            <input type="password" class="login-control" value="12345678" 
             [formControl]="loginForm.controls['password']" required 
             [ngClass]="{'has-error':!loginForm.controls['password'].valid}"/>    
         </div>

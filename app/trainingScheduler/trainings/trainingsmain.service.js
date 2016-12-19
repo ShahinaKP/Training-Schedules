@@ -9,19 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var header_component_1 = require('./header.component');
-var HeaderModule = (function () {
-    function HeaderModule() {
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
+var TrainingsMainService = (function () {
+    function TrainingsMainService(http) {
+        this.http = http;
     }
-    HeaderModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            bootstrap: [header_component_1.HeaderComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], HeaderModule);
-    return HeaderModule;
+    TrainingsMainService.prototype.getTrainings = function () {
+        return this.http.get('assets/json/trainings.json')
+            .map(function (response) { return response.json(); });
+    };
+    TrainingsMainService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], TrainingsMainService);
+    return TrainingsMainService;
 }());
-exports.HeaderModule = HeaderModule;
-//# sourceMappingURL=header.module.js.map
+exports.TrainingsMainService = TrainingsMainService;
+//# sourceMappingURL=trainingsmain.service.js.map
